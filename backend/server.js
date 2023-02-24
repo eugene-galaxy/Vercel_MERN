@@ -19,7 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(bodyParser.json());
 app.use(routes);
-// app.use('/some-route', require(path.join(__dirname, 'api', 'routes', 'route.js'));
+app.use(
+  "/some-route",
+  require(path.join(__dirname, "api", "routes", "routes.js"))
+);
 const __dirname = path.resolve();
 
 if (
